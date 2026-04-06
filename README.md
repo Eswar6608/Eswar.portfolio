@@ -1,24 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a Next.js portfolio project with Tailwind and a project-specific Stitch MCP workflow.
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies and run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Core files:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/page.tsx` - portfolio page sections
+- `src/app/globals.css` - design tokens and shared styling
+- `src/app/layout.tsx` - metadata and fonts
+- `opencode.json` - Stitch MCP configuration
+- `docs/stitch-workflow.md` - project-specific Stitch workflow
+- `src/content/portfolio-brief.ts` - reusable portfolio brief and prompt seeds
+
+## Stitch MCP workflow
+
+This project includes a dedicated Stitch workflow for:
+
+- portfolio content planning
+- section copy refinement
+- visual direction prompts
+- case study rewriting
+
+See `docs/stitch-workflow.md` for the recommended flow.
+
+## Quality checks
+
+Run these before shipping changes:
+
+```bash
+npm run lint
+npm run build
+```
 
 ## Learn More
 
