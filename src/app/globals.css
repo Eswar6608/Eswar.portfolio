@@ -119,6 +119,21 @@ a {
   font-family: var(--font-display), serif;
 }
 
+.brand-mark {
+  display: inline-flex;
+  align-items: baseline;
+  line-height: 1;
+}
+
+.brand-mark__s {
+  display: inline-block;
+  margin-left: -0.12em;
+  transform: skewX(-14deg) translateX(-0.04em) translateY(0.01em);
+  transform-origin: left center;
+  color: #ffa5d9;
+  text-shadow: 0 0 18px rgba(255, 165, 217, 0.4);
+}
+
 .btn-primary {
   display: inline-flex;
   align-items: center;

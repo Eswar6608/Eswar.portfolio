@@ -15,7 +15,11 @@ export function SiteHeader({ currentPath }: { currentPath: string }) {
             href="/"
             className="inline-block w-fit font-display text-lg font-bold tracking-[-0.04em] text-primary transition duration-300 hover:scale-[1.03] hover:text-white sm:text-xl"
           >
-            Eswar.
+            <span className="brand-mark" aria-label="ESwar.">
+              <span>E</span>
+              <span className="brand-mark__s">S</span>
+              <span>war.</span>
+            </span>
           </Link>
 
           <nav className="hidden items-center gap-5 lg:flex xl:gap-8">

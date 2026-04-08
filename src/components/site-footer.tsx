@@ -7,7 +7,11 @@ export function SiteFooter({ currentPath }: { currentPath: string }) {
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-10 sm:px-6 sm:py-12 md:flex-row md:flex-wrap md:items-center md:justify-between lg:px-10">
         <div className="font-display text-center text-lg font-bold tracking-tight text-primary md:text-left">
           <Link href="/" className="transition duration-300 hover:scale-[1.03] hover:text-white">
-            Eswar.
+            <span className="brand-mark" aria-label="ESwar.">
+              <span>E</span>
+              <span className="brand-mark__s">S</span>
+              <span>war.</span>
+            </span>
           </Link>
         </div>
 

@@ -85,10 +85,32 @@ app.post("/api/contact", async (req, res) => {
     });
 
     await transporter.sendMail({
-  to: trimmedEmail,
-  subject: "We received your message",
-  text: "Thanks for contacting us!",
-});
+      to: trimmedEmail,
+      subject: "We received your message",
+      text: [
+        `Hi ${trimmedName},`,
+        "",
+        "Thank you for reaching out through my portfolio. I really appreciate your message.",
+        "",
+        "I've received your request and will get back to you shortly.",
+        "",
+        "Best regards,",
+        "Eswaran",
+      ].join("\n"),
+      html: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #1f2937; max-width: 600px; ">
+          <p style="margin: 0 0 16px;">Hi ${trimmedName},</p>
+          <p style="margin: 0 0 16px;">
+            Thank you for reaching out through my portfolio. I really appreciate your message.
+          </p>
+          <p style="margin: 0 0 24px;">
+            I've received your request and will get back to you shortly.
+          </p>
+          <p style="margin: 0;">Best regards,</p>
+          <p style="margin: 4px 0 0; font-weight: 600;">Eswaran</p>
+        </div>
+      `,
+    });
 
     return res.status(200).json({ message: "Message sent successfully." });
   } catch (error) {
