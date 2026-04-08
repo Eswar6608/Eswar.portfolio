@@ -36,6 +36,8 @@ export const navItems: NavItem[] = [
   { href: "/contact", label: "Contact" },
 ];
 
+const githubProfileHref = "https://github.com/Eswar6608";
+
 export const featuredProjects: Project[] = [
   {
     slug: "rio-business-solutions-website",
@@ -49,8 +51,8 @@ export const featuredProjects: Project[] = [
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBGdQ158-h3j0CvyMiQjkdLyc2aoUue1g1Bw_tjMDcnTGljIN6-aICJplqiQ-iopLT1__03xh6b9Mu3M7Cgr4hfgujX4H1BMBYirDgMWbi_nCjb71M5PSH3qaI5zpYifX-VLxfQcOkYhCrVQFS5WS1i7Qx9YcqhgYL94f3aDaC2jd3O6lYNUQwrzDU-2ap5sU1Rikh4ZroPFPj39JhCUbpgKbVuPpdEn5Xao-Hs1TJWMx9akPaKruBeoGsaIxbyxr1loihbj2GDBvM",
     tags: ["React.js", "Node.js", "Express.js"],
     accent: "primary",
-    href: "#",
-    repoHref: "#",
+    href: githubProfileHref,
+    repoHref: githubProfileHref,
     layout: "feature",
   },
   {
@@ -65,8 +67,8 @@ export const featuredProjects: Project[] = [
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDnq7InD8cnWbyCxtDm0ktBMts2Y6cd0SjIpeRDYhS-VhzBSzqGFX6AE1YsYTNQRCdOZKJNpqbrm_mRKAEOqKsLxbWdWwk-sdB6dqK7JLmcVGyqMaxpZqeuiWtQsutMyHwZ3g3F0niMl8NmzwrnixbprSWmPDu227GOF2si44sv8tOTq9klKfmnHhsEpdnOK8knzkf2bGBNLJz-MlFVcCj9aTQd8Dr9gDJ0cDMAFzIx1uqZEm_kHIv14VrE7dveIyRNBLg-qO6Fx4I",
     tags: ["React.js", "Node.js", "Express.js"],
     accent: "tertiary",
-    href: "#",
-    repoHref: "#",
+    href: githubProfileHref,
+    repoHref: githubProfileHref,
     layout: "square",
   },
   {
@@ -81,8 +83,8 @@ export const featuredProjects: Project[] = [
       "https://lh3.googleusercontent.com/aida-public/AB6AXuCAptMEoiSwIDLZonglGNOKBB7G_K9-moIgkZIzWlp8rYUXhLT-NJFLiKQEmQOwBp4Zsbm6oHrxdwem0fzzOAxUapczo9f1cUZO_bOnZ0cS0T1M7L9kVBBAohUA2qYMO1x5UO-OtKpDrC8-fJ9aflMxDJ9c1gkDCGM2WxXWb0Wm0Q5dQ5NX-ik8zmIxN6Z6UC70F_Y8m-0_vcnGzGBaQJMFIeL52Y1qb62IDOxCw4kgbHCWZ4uRWKKgkteQKQEPjfcK-aZnI9A-fNM",
     tags: ["Live Demo", "Source"],
     accent: "secondary",
-    href: "#",
-    repoHref: "#",
+    href: githubProfileHref,
+    repoHref: githubProfileHref,
     layout: "standard",
   },
   {
@@ -97,8 +99,8 @@ export const featuredProjects: Project[] = [
       "https://lh3.googleusercontent.com/aida-public/AB6AXuD6xYo2UjVqN-VRXy6HaGZtjJQyrra0-fKafNzjjzX7qDPmCbND4cdpmgsAjbVzkhs7SHlgdVg3X7GCpSW_nmbDp4JPBYQ2sZ1wqHWLbkl1PJJ7U0E9jjl2phLDHpPhoUzo7cuBWT5rZJxDnUubcIb8ZWx1zjpQCUpf5PW9CtTojYYuNgwuK5ZoNU0iqkKwWN_NcZ7__xtWtAPWAZ-sywlyZtaqT6EWo02yRHtIepPaKGiB9wZGKaIguVaMvkHZDNTSl2ZhQVzG7sw",
     tags: ["Live Demo", "Source"],
     accent: "primary",
-    href: "#",
-    repoHref: "#",
+    href: githubProfileHref,
+    repoHref: githubProfileHref,
     layout: "standard",
   },
   {
@@ -113,8 +115,8 @@ export const featuredProjects: Project[] = [
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBo048z4l6KKfj1K3ZnYetliGTAw86pfQcNXbpSXcgndzHgRaxktNtDaSmdprPs3nWFx7w3u84QCiL0i1PBDUgSdQeBAqIq0AwuqR8ufNmBDXUVduOTCX4FARMTIZJlqME9uZsAMsxwcSK8A7qhyNOiOrQpX0lltVjr1uUIjBJve4MZ69N_Rn1zOdNwjl2kEQ3E_mOpBq1zlr-si_jdh5YhL0KUNKKi4f_50m4TpOxCAdVpAnhRHO42sWk2aO1Ka8py30jPSKf1WSU",
     tags: ["HTML", "CSS", "Bootstrap"],
     accent: "primary",
-    href: "#",
-    repoHref: "#",
+    href: githubProfileHref,
+    repoHref: githubProfileHref,
     layout: "split",
   },
 ];

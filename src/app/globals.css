@@ -47,6 +47,63 @@ body {
     linear-gradient(180deg, #060e20 0%, #071124 52%, #060e20 100%);
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
+  overflow-x: hidden;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float-orb {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.04);
+  }
+}
+
+@keyframes drift-tilt {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate3d(0, -10px, 0) rotate(2deg);
+  }
+}
+
+@keyframes line-grow {
+  from {
+    transform: scaleY(0.15);
+    opacity: 0.35;
+  }
+
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
 }
 
 a {
@@ -71,11 +128,14 @@ a {
   padding: 0.875rem 1.5rem;
   font-weight: 700;
   color: #0f00a4;
-  transition: transform 180ms ease, filter 180ms ease;
+  transition: transform 180ms ease, filter 180ms ease, box-shadow 180ms ease;
+  width: 100%;
 }
 
 .btn-primary:hover {
+  transform: translateY(-2px);
   filter: brightness(1.05);
+  box-shadow: 0 16px 32px rgba(96, 99, 238, 0.24);
 }
 
 .btn-secondary {
@@ -87,6 +147,15 @@ a {
   padding: 0.875rem 1.5rem;
   font-weight: 700;
   color: var(--foreground);
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease,
+    border-color 180ms ease;
+  width: 100%;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(25, 37, 64, 0.72);
+  color: #ffffff;
 }
 
 .card {
@@ -198,7 +267,141 @@ a {
   box-shadow: 0 40px 80px rgba(96, 99, 238, 0.08);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fade-up 720ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fade-in 900ms ease forwards;
+}
+
+.animate-float-orb {
+  animation: float-orb 8s ease-in-out infinite;
+}
+
+.animate-drift-tilt {
+  transform-origin: center;
+  animation: drift-tilt 9s ease-in-out infinite;
+}
+
+.animation-delay-1 {
+  animation-delay: 120ms;
+}
+
+.animation-delay-2 {
+  animation-delay: 240ms;
+}
+
+.animation-delay-3 {
+  animation-delay: 360ms;
+}
+
+.animation-delay-4 {
+  animation-delay: 480ms;
+}
+
+.reveal-section {
+  opacity: 0;
+  transform: translate3d(0, 40px, 0);
+  animation: fade-up 760ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 32%;
+}
+
+.reveal-soft {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  animation: fade-up 640ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-timeline: view();
+  animation-range: entry 12% cover 28%;
+}
+
+.reveal-card {
+  opacity: 0;
+  transform: translate3d(0, 50px, 0) scale(0.97);
+  animation: fade-up 780ms cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+  animation-timeline: view();
+  animation-range: entry 8% cover 26%;
+}
+
+.reveal-line {
+  transform-origin: top;
+  animation: line-grow linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 42%;
+}
+
+.stagger-1 {
+  animation-delay: 100ms;
+}
+
+.stagger-2 {
+  animation-delay: 180ms;
+}
+
+.stagger-3 {
+  animation-delay: 260ms;
+}
+
+.stagger-4 {
+  animation-delay: 340ms;
+}
+
+@supports not (animation-timeline: view()) {
+  .reveal-section {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .reveal-soft,
+  .reveal-card,
+  .reveal-line {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-drift-tilt,
+  .reveal-section,
+  .reveal-soft,
+  .reveal-card,
+  .reveal-line {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
 @media (min-width: 768px) {
+  .btn-primary,
+  .btn-secondary {
+    width: auto;
+  }
+
   .section-panel {
     padding: 3rem;
   }

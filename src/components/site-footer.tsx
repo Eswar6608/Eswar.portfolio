@@ -3,15 +3,15 @@ import { navItems, socialLinks } from "@/lib/site-data";
 
 export function SiteFooter({ currentPath }: { currentPath: string }) {
   return (
-    <footer className="mt-20 border-t border-white/5 bg-[#091328]">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-12 sm:px-8 md:flex-row md:flex-wrap md:items-center md:justify-between lg:px-10">
-        <div className="font-display text-lg font-bold tracking-tight text-primary">
-          <Link href="/" className="transition-colors hover:text-white">
+    <footer className="reveal-section mt-20 border-t border-white/5 bg-[#091328]">
+      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-10 sm:px-6 sm:py-12 md:flex-row md:flex-wrap md:items-center md:justify-between lg:px-10">
+        <div className="font-display text-center text-lg font-bold tracking-tight text-primary md:text-left">
+          <Link href="/" className="transition duration-300 hover:scale-[1.03] hover:text-white">
             Eswar.
           </Link>
         </div>
 
-        <nav className="flex flex-wrap justify-center gap-6 text-sm text-muted md:gap-8">
+        <nav className="flex flex-wrap justify-center gap-x-5 gap-y-3 text-sm text-muted md:gap-8">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -19,7 +19,7 @@ export function SiteFooter({ currentPath }: { currentPath: string }) {
               className={
                 currentPath === item.href
                   ? "text-white"
-                  : "transition-colors hover:text-white"
+                  : "transition duration-200 hover:-translate-y-0.5 hover:text-white"
               }
             >
               {item.label}
@@ -27,11 +27,11 @@ export function SiteFooter({ currentPath }: { currentPath: string }) {
           ))}
         </nav>
 
-        <p className="text-xs text-muted/70">© 2024 Eswar. Built with rigor.</p>
+        <p className="text-center text-xs text-muted/70 md:text-left">© 2024 Eswar. Built with rigor.</p>
 
-        <div className="flex items-center gap-5 text-muted">
+        <div className="flex items-center justify-center gap-5 text-muted md:justify-end">
           {socialLinks.slice(0, 2).map((link) => (
-            <Link key={link.label} href={link.href} aria-label={link.label} className="transition-colors hover:text-primary">
+            <Link key={link.label} href={link.href} aria-label={link.label} className="transition duration-200 hover:-translate-y-0.5 hover:text-primary">
               {link.label === "LinkedIn" ? (
                 <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-current">
                   <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A2.02 2.02 0 0 0 3.2 5.02c0 1.1.9 2 2.02 2 1.13 0 2.03-.9 2.03-2A2.02 2.02 0 0 0 5.25 3ZM20.8 12.9c0-3.04-1.62-4.45-3.79-4.45-1.75 0-2.53.96-2.97 1.64V8.5h-3.38c.04 1.06 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.68.13-.92.27-.68.87-1.38 1.88-1.38 1.33 0 1.86 1.02 1.86 2.5V20H21c0 0 .04-6.17.04-7.1Z" />

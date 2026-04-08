@@ -24,14 +24,14 @@ export function ProjectCard({ project, featured = false }: { project: Project; f
             className="object-cover opacity-80 transition duration-700 group-hover:scale-105"
           />
         </div>
-        <div className="space-y-6 bg-surface-card px-6 py-5 sm:px-8 sm:py-6">
+        <div className="space-y-6 bg-surface-card px-5 py-5 sm:px-8 sm:py-6">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
             <div className="min-w-0">
               <p className={`mb-2 block text-[10px] font-bold uppercase tracking-[0.22em] ${accentClass}`}>
                 {project.category}
                 {project.label ? ` • ${project.label}` : ""}
               </p>
-              <h3 className="font-display text-[2rem] font-bold leading-tight tracking-[-0.04em] text-white">
+              <h3 className="font-display text-[1.65rem] font-bold leading-tight tracking-[-0.04em] text-white sm:text-[2rem]">
                 {project.title}
               </h3>
             </div>
@@ -79,13 +79,13 @@ export function ProjectCard({ project, featured = false }: { project: Project; f
             className="object-cover opacity-80 transition duration-700 group-hover:scale-105"
           />
         </div>
-        <div className="space-y-4 bg-surface-card p-6">
+         <div className="space-y-4 bg-surface-card p-5 sm:p-6">
           <div>
             <p className={`mb-2 block text-[10px] font-bold uppercase tracking-[0.22em] ${accentClass}`}>
               {project.category}
               {project.label ? ` • ${project.label}` : ""}
             </p>
-            <h3 className="font-display text-[2rem] font-bold leading-tight tracking-[-0.04em] text-white">
+             <h3 className="font-display text-[1.65rem] font-bold leading-tight tracking-[-0.04em] text-white sm:text-[2rem]">
               {project.title}
             </h3>
           </div>
@@ -98,12 +98,12 @@ export function ProjectCard({ project, featured = false }: { project: Project; f
             ))}
           </div>
           <div className="flex items-center justify-between border-t border-white/5 pt-4">
-            <Link href={project.href ?? "#"} className={`text-sm font-bold ${accentClass}`}>
-              Demo
-            </Link>
-            <Link href={project.repoHref ?? "#"} className="text-muted transition hover:text-white">
-              <span aria-hidden="true">⌁</span>
-            </Link>
+              <Link href={project.href ?? "#"} className={`text-sm font-bold ${accentClass}`}>
+                Demo
+              </Link>
+              <Link href={project.repoHref ?? "#"} className="text-muted transition hover:text-white">
+                <span aria-hidden="true">⌁</span>
+              </Link>
           </div>
         </div>
       </article>
@@ -123,13 +123,13 @@ export function ProjectCard({ project, featured = false }: { project: Project; f
               className="relative h-full w-full object-cover opacity-80 transition duration-700 group-hover:scale-105"
             />
           </div>
-          <div className="flex flex-1 flex-col justify-center space-y-6 p-8 md:w-[48%] md:p-12">
+          <div className="flex flex-1 flex-col justify-center space-y-6 p-5 sm:p-8 md:w-[48%] md:p-12">
             <div>
               <p className={`mb-2 block text-[10px] font-bold uppercase tracking-[0.22em] ${accentClass}`}>
                 {project.category}
                 {project.label ? ` • ${project.label}` : ""}
               </p>
-              <h3 className="font-display text-[2.25rem] font-bold leading-tight tracking-[-0.04em] text-white">
+              <h3 className="font-display text-[1.85rem] font-bold leading-tight tracking-[-0.04em] text-white sm:text-[2.25rem]">
                 {project.title}
               </h3>
             </div>

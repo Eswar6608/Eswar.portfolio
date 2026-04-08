@@ -114,9 +114,9 @@ const timeline = [
 export default function AboutPage() {
   return (
     <PageShell currentPath="/about">
-      <section className="mb-32 grid gap-12 overflow-x-clip pb-8 pt-6 lg:grid-cols-12 lg:items-start">
-        <div className="relative lg:col-span-5">
-          <div className="relative aspect-square overflow-hidden rounded-3xl bg-surface-low shadow-[0_24px_56px_rgba(99,102,241,0.12)]">
+      <section className="mb-24 grid gap-10 overflow-x-clip pb-8 pt-4 sm:pt-6 lg:mb-32 lg:grid-cols-12 lg:items-start">
+        <div className="animate-fade-in relative mx-auto w-full max-w-[28rem] lg:col-span-5 lg:max-w-none">
+          <div className="animate-drift-tilt relative aspect-square overflow-hidden rounded-3xl bg-surface-low shadow-[0_24px_56px_rgba(99,102,241,0.12)]">
             <Image
               src="/boy.jpg"
               alt="Profile portrait"
@@ -128,14 +128,14 @@ export default function AboutPage() {
         </div>
 
         <div className="min-w-0 lg:col-span-7 lg:pl-12">
-          <span className="mb-4 block text-xs font-bold uppercase tracking-[0.3em] text-primary">
+          <span className="animate-fade-up mb-4 block text-xs font-bold uppercase tracking-[0.3em] text-primary">
             About Me
           </span>
-          <h1 className="mb-8 font-display text-5xl font-extrabold leading-[1.1] tracking-[-0.05em] text-white sm:text-6xl">
+          <h1 className="animate-fade-up animation-delay-1 mb-8 text-balance font-display text-4xl font-extrabold leading-[1.1] tracking-[-0.05em] text-white sm:text-6xl">
             Bridging the gap between <span className="text-primary-dim">form</span> and{" "}
             <span className="text-secondary">function</span>.
           </h1>
-          <div className="space-y-6 text-lg leading-8 text-muted">
+          <div className="animate-fade-up animation-delay-2 space-y-6 text-base leading-7 text-muted sm:text-lg sm:leading-8">
             <p>
               I am a React and MERN stack specialist with a proven track record of
               architecting robust corporate solutions and delivering high-impact freelance
@@ -151,7 +151,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative mb-32 overflow-hidden rounded-[2rem] bg-surface-low px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
+      <section className="reveal-section relative mb-24 overflow-hidden rounded-[2rem] bg-surface-low px-5 py-14 sm:px-8 sm:py-20 lg:mb-32 lg:px-10 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16">
             <h2 className="font-display text-4xl font-bold text-white">The Toolkit</h2>
@@ -166,7 +166,7 @@ export default function AboutPage() {
                 return (
                   <div
                     key={card.title}
-                    className="group flex flex-col justify-between rounded-3xl bg-surface-card p-8 transition-all duration-300 hover:bg-surface-highest md:col-span-2 md:row-span-2"
+                    className="reveal-card stagger-1 group flex flex-col justify-between rounded-3xl bg-surface-card p-6 transition-all duration-300 hover:-translate-y-2 hover:bg-surface-highest hover:shadow-[0_30px_80px_rgba(96,99,238,0.14)] sm:p-8 md:col-span-2 md:row-span-2"
                   >
                     <div>
                       <Icon className={`mb-6 h-10 w-10 ${card.accent}`} />
@@ -188,7 +188,7 @@ export default function AboutPage() {
                 return (
                   <div
                     key={card.title}
-                    className="group rounded-3xl bg-surface-card p-8 transition-all duration-300 hover:bg-surface-highest md:col-span-2"
+                    className="reveal-card stagger-2 group rounded-3xl bg-surface-card p-6 transition-all duration-300 hover:-translate-y-2 hover:bg-surface-highest hover:shadow-[0_30px_80px_rgba(96,99,238,0.14)] sm:p-8 md:col-span-2"
                   >
                     <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
                       <div className="min-w-0">
@@ -207,7 +207,7 @@ export default function AboutPage() {
               return (
                 <div
                   key={card.title}
-                  className="group rounded-3xl bg-surface-card p-8 transition-all duration-300 hover:bg-surface-highest"
+                  className="reveal-card stagger-3 group rounded-3xl bg-surface-card p-6 transition-all duration-300 hover:-translate-y-2 hover:bg-surface-highest hover:shadow-[0_30px_80px_rgba(96,99,238,0.14)] sm:p-8"
                 >
                   <Icon className={`mb-4 h-8 w-8 ${card.accent}`} />
                   <h3 className="font-display text-lg font-bold text-white">{card.title}</h3>
@@ -219,7 +219,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-6 pb-10 sm:px-8 lg:px-8">
+      <section className="mx-auto max-w-4xl px-0 pb-10 sm:px-0">
         <div className="mb-16 text-center">
           <h2 className="font-display text-4xl font-bold text-white">Career Trajectory</h2>
           <p className="mt-4 text-muted">A timeline of professional milestones and technical growth.</p>

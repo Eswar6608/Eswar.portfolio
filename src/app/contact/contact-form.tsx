@@ -149,7 +149,7 @@ export function ContactForm() {
       onKeyDown={handleKeyDown}
     >
       <div className="grid gap-6 md:grid-cols-2">
-        <div>
+        <div className="reveal-soft stagger-1">
           <label htmlFor="name" className="form-label">
             Name
           </label>
@@ -171,7 +171,7 @@ export function ContactForm() {
             </p>
           ) : null}
         </div>
-        <div>
+        <div className="reveal-soft stagger-2">
           <label htmlFor="email" className="form-label">
             Email
           </label>
@@ -194,7 +194,7 @@ export function ContactForm() {
           ) : null}
         </div>
       </div>
-      <div>
+      <div className="reveal-soft stagger-2">
         <label htmlFor="subject" className="form-label">
           Subject
         </label>
@@ -216,7 +216,7 @@ export function ContactForm() {
           </p>
         ) : null}
       </div>
-      <div>
+      <div className="reveal-soft stagger-3">
         <label htmlFor="message" className="form-label">
           Message
         </label>
@@ -244,7 +244,7 @@ export function ContactForm() {
       ) : null}
       <button
         type="button"
-        className="btn-primary px-10 py-4 text-lg disabled:cursor-not-allowed disabled:opacity-70"
+        className="btn-primary reveal-soft stagger-4 px-10 py-4 text-lg disabled:cursor-not-allowed disabled:opacity-70"
         disabled={isSubmitting}
         onClick={(event: MouseEvent<HTMLButtonElement>) => {
           event.preventDefault();
