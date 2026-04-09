@@ -1,7 +1,28 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageShell } from "@/components/page-shell";
 import { blogPosts, featuredProjects } from "@/lib/site-data";
+
+export const metadata: Metadata = {
+  title: "MERN Stack Developer Portfolio",
+  description:
+    "Explore the portfolio of Eswaran A, a MERN stack and React developer building responsive web applications, polished interfaces, and scalable full-stack products.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Eswaran A | MERN Stack Developer Portfolio",
+    description:
+      "Explore selected projects, engineering writing, and contact details for Eswaran A, a MERN stack and React developer from India.",
+    url: "/",
+  },
+  twitter: {
+    title: "Eswaran A | MERN Stack Developer Portfolio",
+    description:
+      "Selected projects, engineering writing, and full-stack development work by Eswaran A.",
+  },
+};
 
 export default function HomePage() {
   const highlightedProjects = featuredProjects.slice(0, 2);

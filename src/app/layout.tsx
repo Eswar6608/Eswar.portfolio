@@ -15,7 +15,7 @@ const bodyFont = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-project-name.vercel.app"),
+  metadataBase: new URL("https://eswar-portfolio-nine.vercel.app/"),
   title: {
     default: "Eswaran A | MERN Stack Developer",
     template: "%s | Eswaran A",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Eswaran A" }],
   alternates: {
-    canonical: "https://your-project-name.vercel.app",
+    canonical: "https://eswar-portfolio-nine.vercel.app/",
   },
   robots: {
     index: true,
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "Eswaran A | MERN Stack Developer",
     description:
       "Portfolio of Eswaran A, a MERN Stack Developer and React Developer from India building responsive, scalable, and user-focused web applications.",
-    url: "https://your-project-name.vercel.app",
+    url: "https://eswar-portfolio-nine.vercel.app/",
     siteName: "Eswaran A Portfolio",
     images: [
       {

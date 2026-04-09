@@ -1,5 +1,26 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { PageShell } from "@/components/page-shell";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn about Eswaran A, a React and MERN stack developer focused on scalable products, frontend architecture, and performance-driven web experiences.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Eswaran A",
+    description:
+      "Career background, toolkit, and professional journey of Eswaran A, a React and MERN stack developer.",
+    url: "/about",
+  },
+  twitter: {
+    title: "About Eswaran A",
+    description:
+      "Career background, toolkit, and professional journey of Eswaran A.",
+  },
+};
 
 function LayersIcon({ className = "" }: { className?: string }) {
   return (

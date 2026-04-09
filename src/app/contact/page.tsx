@@ -1,8 +1,29 @@
+import type { Metadata } from "next";
 import { PageShell } from "@/components/page-shell";
 import { ContactForm } from "./contact-form";
 import { socialLinks } from "@/lib/site-data";
 
 const whatsappHref = "https://wa.me/919344626608";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Contact Eswaran A for freelance projects, React development, MERN stack work, and collaboration opportunities.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact | Eswaran A",
+    description:
+      "Get in touch with Eswaran A for freelance projects, React development, and full-stack collaboration.",
+    url: "/contact",
+  },
+  twitter: {
+    title: "Contact | Eswaran A",
+    description:
+      "Get in touch with Eswaran A for freelance projects and collaboration.",
+  },
+};
 
 export default function ContactPage() {
   return (

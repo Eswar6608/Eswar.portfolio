@@ -1,7 +1,28 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "@/components/page-shell";
 import { ProjectCard } from "@/components/project-card";
 import { featuredProjects } from "@/lib/site-data";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Browse featured projects by Eswaran A, including responsive websites, full-stack applications, and frontend-focused product builds.",
+  alternates: {
+    canonical: "/projects",
+  },
+  openGraph: {
+    title: "Projects | Eswaran A",
+    description:
+      "Featured portfolio projects spanning corporate websites, product interfaces, and full-stack web builds by Eswaran A.",
+    url: "/projects",
+  },
+  twitter: {
+    title: "Projects | Eswaran A",
+    description:
+      "Featured portfolio projects by Eswaran A across frontend and full-stack development.",
+  },
+};
 
 export default function ProjectsPage() {
   return (

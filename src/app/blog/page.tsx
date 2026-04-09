@@ -1,6 +1,27 @@
+import type { Metadata } from "next";
 import { BlogCard } from "@/components/blog-card";
 import { PageShell } from "@/components/page-shell";
 import { blogPosts } from "@/lib/site-data";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Read articles by Eswaran A on systems design, frontend architecture, product thinking, performance, and modern web development.",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Blog | Eswaran A",
+    description:
+      "Engineering notes and articles on systems design, frontend architecture, and modern web development by Eswaran A.",
+    url: "/blog",
+  },
+  twitter: {
+    title: "Blog | Eswaran A",
+    description:
+      "Engineering notes on systems design, frontend architecture, and modern web development.",
+  },
+};
 
 export default function BlogPage() {
   return (
