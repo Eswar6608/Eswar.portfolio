@@ -19,7 +19,6 @@ const initialValues: FormValues = {
 };
 
 const requiredFieldMessage = "Please complete this required field";
-const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:4000";
 
 function validateEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -84,7 +83,7 @@ export function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(`${apiBaseUrl}/api/contact`, {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -94,6 +93,7 @@ export function ContactForm() {
           email: values.email.trim(),
           subject: values.subject.trim(),
           message: values.message.trim(),
+          company: "",
         }),
       });
 
@@ -110,9 +110,9 @@ export function ContactForm() {
         text: data.message || "Message sent successfully.",
       });
     } catch (error) {
-      const message =
+        const message =
         error instanceof TypeError
-          ? "Unable to reach the mail server. Make sure `npm run server` is running."
+          ? "Unable to reach the contact service right now. Please try again shortly."
           : error instanceof Error
             ? error.message
             : "Something went wrong while sending your message.";
@@ -217,6 +217,18 @@ export function ContactForm() {
         ) : null}
       </div>
       <div className="reveal-soft stagger-3">
+        <label htmlFor="company" className="sr-only">
+          Company
+        </label>
+        <input
+          id="company"
+          name="company"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          className="hidden"
+          aria-hidden="true"
+        />
         <label htmlFor="message" className="form-label">
           Message
         </label>

@@ -15,8 +15,62 @@ const bodyFont = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Stitch Portfolio",
-  description: "A refined portfolio landing page built with Next.js, Tailwind, and Stitch MCP configuration.",
+  metadataBase: new URL("https://your-project-name.vercel.app"),
+  title: {
+    default: "Eswaran A | MERN Stack Developer",
+    template: "%s | Eswaran A",
+  },
+  description:
+    "Eswaran A is a MERN Stack Developer and React Developer from India, building responsive web applications, scalable full-stack solutions, and modern user-focused interfaces.",
+  keywords: [
+    "Eswaran A",
+    "Eswaran A portfolio",
+    "MERN Stack Developer",
+    "React Developer",
+    "Full Stack Developer",
+    "Frontend Developer",
+    "Web Developer India",
+    "JavaScript Developer",
+    "TypeScript Developer",
+    "Next.js Developer",
+    "MongoDB",
+    "Express.js",
+    "React.js",
+    "Node.js",
+    "Portfolio Website",
+  ],
+  authors: [{ name: "Eswaran A" }],
+  alternates: {
+    canonical: "https://your-project-name.vercel.app",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Eswaran A | MERN Stack Developer",
+    description:
+      "Portfolio of Eswaran A, a MERN Stack Developer and React Developer from India building responsive, scalable, and user-focused web applications.",
+    url: "https://your-project-name.vercel.app",
+    siteName: "Eswaran A Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Eswaran A Portfolio",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eswaran A | MERN Stack Developer",
+    description:
+      "Portfolio of Eswaran A, a MERN Stack Developer and React Developer from India.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
