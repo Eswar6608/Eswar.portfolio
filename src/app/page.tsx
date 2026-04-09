@@ -65,7 +65,7 @@ export default function HomePage() {
                 className="object-cover grayscale transition duration-500 hover:grayscale-0"
               />
             </div>
-            <div className="absolute bottom-4 left-4 right-4 rounded-[24px] border border-white/5 bg-surface-card/95 p-4 shadow-ambient backdrop-blur sm:-bottom-5 sm:left-auto sm:right-6 sm:w-auto sm:p-6">
+            <div className="absolute -bottom-8 left-4 right-4 rounded-[24px] border border-white/5 bg-surface-card/95 p-4 shadow-ambient backdrop-blur min-[630px]:-bottom-5 sm:left-auto sm:right-6 sm:w-auto sm:p-6">
               <div className="flex items-center gap-3 sm:gap-4">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary sm:h-12 sm:w-12">
                   2+
